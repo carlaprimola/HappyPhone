@@ -290,12 +290,10 @@ h3{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100vh;
 }
 .products{
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
 }
 .row  {

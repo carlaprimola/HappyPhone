@@ -234,6 +234,8 @@ h4 {
 .botons:hover {
     cursor: pointer;
     background-color: #297780;
+    transform: scale(1.1); 
+    transition: all .5s;
 }
 
 

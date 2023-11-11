@@ -118,7 +118,7 @@ h4{
     box-shadow: 0 0 10px rgba(0, 0, 0, 5);
     /* max-width: 400px; */
     width: 40%;
-    height: 50vh;
+    height: 100vh;
 
     margin: 50px;
 
@@ -159,7 +159,7 @@ img .logo-user{
 }
 
 .control{
-    width: 30rem;
+    width: 20rem;
     height: 2.6rem;
     padding: 20px;
     border: 1px solid #ccc;

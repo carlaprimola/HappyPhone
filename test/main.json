@@ -1,0 +1,44 @@
+[
+    {
+        "model": "Apple iPhone 15",
+        "brand":"iPhone",
+        "mrp":"959",
+        "price":"899",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/1/1777519-5029519.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"null",
+        "storage":"258GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "OPPO A57s",
+        "brand":"OPPO",
+        "mrp":"209",
+        "price":"129",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/6/7/5/9/1/1675910-4812764.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"128GB",
+        "storage":"4GB",
+        "camera":"48mp"
+    },
+    {
+        "model": "Samsung Galaxy A23",
+        "brand":"Samsung",
+        "mrp":"329",
+        "price":"",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/6/1/5/7/6/1615763-4681329.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"5GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    },
+    {
+        "model": "ZTE Blade V40",
+        "brand":"ZTE",
+        "mrp":"201",
+        "price":"109",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/6/3/1/5/4/1631543-4873508.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"6GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    }
+
+]

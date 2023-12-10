@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - HappyPhone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600;800&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <script src="./js/constructor.js"></script>
 </head>
 <body>
-    <section class="main-container">
         <!--HEADER-->
         <header>
             <div><a href="./index.html"><img class="logo-web" src="./img/logo.png" alt="logo_HappyPhone"></a></src></div>
@@ -27,9 +24,9 @@
         </header>
 
         <!--OFERTA PRINCIPAL-->
-        <main class="main-offer">
+        <main class="main-offer" href="./product.html">
             <figure>
-                <a href="./product.html"><img class="main-image" src="./img/Movil_Inicio.png" alt="Foto con oferta de movil de lanzamiento"></a>
+                <a><img class="main-image" src="./img/Movil_Inicio.png" alt="Foto con oferta de movil de lanzamiento"></a>
             </figure>
             
             <article class="main-text">
@@ -40,64 +37,8 @@
         </main>
         
        <!--CAROUSEL PRODUCTOS-->
-        <section class="carousel-products">
-            <article class="product">
-                <figure>
-                    <a href="./product1.html"><img class="image-product" src="./img/happy1.png" alt="phone1"></a>
-                </figure>
-                
-                <div class="info-product">
-                    <p>Happy 1</p>
-                    <a href="./product1.html"><button>Comprar</button></a>
-                </div>
-                
-            </article>
-
-            <article class="product">
-                <figure>
-                    <a href="./product2.html"><img class="image-product" src="./img/happy2.png" alt="phone2"></a>
-                </figure>
-
-                <div class="info-product">
-                    <p>Happy 2</p>
-                    <a href="./product2.html"><button>Comprar</button></a>
-                </div>
-            </article>
-
-            <article class="product">
-                <figure>
-                    <a href="./product3.html"><img class="image-product" src="./img/happy3.png" alt="phone3"></a>
-                </figure>
-
-                <div class="info-product">
-                    <p>Happy 3</p>
-                    <a href="./product3.html"><button>Comprar</button></a>
-                </div>
-            </article>
-
-            <article class="product">
-                <figure>
-                    <a href="./product4.html"><img class="image-product" src="./img/happy4.png" alt="phone4"></a>
-                </figure>
-
-                <div class="info-product">
-                    <p>Happy 4</p>
-                    <a href="./product4.html"><button>Comprar</button></a>
-                </div>
-            </article>
-
-            <article class="product">
-                <figure>
-                    <a href="./product5.html"><img class="image-product" src="./img/happy5.png" alt="phone5"></a>
-                </figure>
-
-                <div class="info-product">
-                    <p>Happy 5</p>
-                    <a href="./product5.html"><button>Comprar</button></a>
-                </div>
-            </article>
-
-        </section>
+       <section class="carousel-products" id="carousel-products">
+       </section>
         
 
 
@@ -113,10 +54,7 @@
                 </ul>
             </section>
 
-            <figure class="rrss-footer">
-                <a href="https://www.instagram.com/" target="_blank"><img class="logo-rrss" src="./img/instagram.png" alt="logo_instagram"></a>
-                <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" target="_blank"><img class="logo-rrss" src="./img/tiktok.png" alt="logo_tiktok"></a>
-                <a href="https://www.youtube.com/" target="_blank"><img class="logo-rrss" src="./img/youtube.png" alt="logo_youtube"></a>
+            <figure class="rrss-footer" id="redes-sociales-container">
             </figure>
 
             <section class="info-footer">
@@ -128,7 +66,6 @@
             </section>
 
         </footer>
-    </section>
     
 </body>
 </html>

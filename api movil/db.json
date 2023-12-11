@@ -1,0 +1,222 @@
+{
+"data":
+
+[
+    {
+        "model": "Apple iPhone 15",
+        "brand":"iPhone",
+        "mrp":"959",
+        "price":"899",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/1/1777519-5029519.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"null",
+        "storage":"258GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "Apple iPhone 15 Pro Max",
+        "brand":"iPhone",
+        "mrp":"1469",
+        "price":"1399",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/1/1777512-5029491.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"null",
+        "storage":"258GB",
+        "camera":"48mp"
+    },
+    {
+        "model": "Apple iPhone 15 Plus",
+        "brand":"iPhone",
+        "mrp":"1109",
+        "price":"1049",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/3/1777534-5029577.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"null",
+        "storage":"128GB",
+        "camera":"48mp"
+    },
+    {
+        "model": "Apple iPhone 15 Black Titanium",
+        "brand":"iPhone",
+        "mrp":"1719",
+        "price":"1619",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/3/1777534-5029577.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"null",
+        "storage":"512GB",
+        "camera":"48mp"
+    },
+    {
+        "model": "Apple iPhone 15 Black",
+        "brand":"iPhone",
+        "mrp":"1339",
+        "price":"1269",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/3/1777534-5029577.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"null",
+        "storage":"512GB",
+        "camera":"48mp"
+    },
+
+    
+    {
+        "model": "Samsung Galaxy A23",
+        "brand":"Samsung",
+        "mrp":"329",
+        "price":"",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/6/1/5/7/6/1615763-4681329.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"5GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "Samsung Galaxy Z Flip5",
+        "brand":"Samsung",
+        "mrp":"1209",
+        "price":"1149",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/0/1/4/1770148-5013099.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"8GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    },
+
+        {
+            "model": "Samsung Galaxy Z Fold5",
+            "brand":"Samsung",
+            "mrp":"1909",
+            "price":"1799",
+            "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/0/4/0/1770404-5013161.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram":"12GB",
+            "storage":"256GB",
+            "camera":"48mp"
+        },
+
+        {
+            "model": "Samsung Galaxy Z Fold5 Green",
+            "brand":"Samsung",
+            "mrp":"1209",
+            "price":"1149",
+            "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/0/1/4/1770148-5013099.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram":"8GB",
+            "storage":"256GB",
+            "camera":"48mp"
+        },
+
+        {
+            "model": "Samsung Galaxy Z Fold5 Cream",
+            "brand":"Samsung",
+            "mrp":"2029",
+            "price":"1999",
+            "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/0/5/3/1770534-5013179.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram":"12GB",
+            "storage":"512GB",
+            "camera":"48mp"
+        },
+        {
+            "model": "Samsung Galaxy S23 ültra",
+            "brand":"Samsung",
+            "mrp":"1409",
+            "price":"1299",
+            "image":"https://cdn.phonehouse.es/res/products-image/1/7/2/0/2/9/1720295-4892683.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram":"8GB",
+            "storage":"256GB",
+            "camera":"48mp"
+        },
+
+        {
+            "model": "OPPO A57s",
+            "brand":"OPPO",
+            "mrp":"209",
+            "price":"139",
+            "image":"https://cdn.phonehouse.es/res/products-image/1/6/7/5/9/1/1675910-4812764.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram":"128GB",
+            "storage":"4GB",
+            "camera":"48mp"
+        },
+    {
+        "model": "OPPO A17",
+        "brand":"OPPO",
+        "mrp":"",
+        "price":"119",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/6/7/5/7/0/1675707-5091518.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"64GB",
+        "storage":"4GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "OPPO A98",
+        "brand":"OPPO",
+        "mrp":"",
+        "price":"299",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/5/4/2/9/1754290-4966816.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"256GB",
+        "storage":"8GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "Redmi Note 10",
+        "brand":"Xiaomi",
+        "mrp":"249",
+        "price":"179",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/2/5/4/5/6/1254563-3910496.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"4GB",
+        "storage":"64GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "Poco X4 Pro",
+        "brand":"Xiaomi",
+        "mrp":"",
+        "price":"296.40",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/5/1/0/8/4/1510847-4431359.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"4GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    },
+         
+    {
+        "model": "ZTE Blade V40",
+        "brand":"ZTE",
+        "mrp":"201",
+        "price":"109",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/6/3/1/5/4/1631543-4873508.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"4GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "ZTE Blade A73",
+        "brand":"ZTE",
+        "mrp":"149",
+        "price":"129",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/6/0/7/1776077-5027361.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"6GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    },
+    {
+        "model": "Vivo Y36 Gold",
+        "brand":"Vivo",
+        "mrp":"299",
+        "price":"219",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/7/0/1/3/1770131-5008284.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"8GB",
+        "storage":"256GB",
+        "camera":"48mp"
+    },
+
+    {
+        "model": "TCL 40 SE",
+        "brand":"TCL",
+        "mrp":"169",
+        "price":"129",
+        "image":"https://cdn.phonehouse.es/res/products-image/1/7/4/0/8/3/1740839-4927791.jpg?&w=380&h=380&trim=auto&auto=format",
+        "ram":"4GB",
+        "storage":"128GB",
+        "camera":"48mp"
+    }
+
+
+]
+}

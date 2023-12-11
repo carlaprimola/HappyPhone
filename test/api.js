@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch the JSON file
-    fetch('main.json')
+    fetch('http://localhost:3000/data')
         .then(response => response.json())
         .then(data => {
             // Manipulate the HTML DOM with the JSON data

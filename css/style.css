@@ -1,11 +1,17 @@
 /*TODA LA WEB*/
+@font-face {
+    font-family: 'poppB';
+    src: url("../fonts/poppins/Poppins-Bold.ttf") format('truetype');
+}@font-face {
+    font-family: 'poppR';
+    src: url("../fonts/poppins/Poppins-Regular.ttf") format('truetype');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    font-family: 'Playpen Sans', cursive; /*Tipografía: Poppins*/
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppB';
 }
 
 
@@ -124,25 +130,23 @@ ul{
 }
 
 .main-offer{
-    
     width: 100%;
     margin-top: 40px;
-    
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
-   
     justify-content: space-between;
 }
-
 .main-offer figure{
-    
-    margin-left: 0%;
+    background-color: red; /* ELIMINAR */
+    text-align: center; /* CENTRADO DE LA IMAGEN */
+    width: 100%;
 }
 
 .main-text{
     display: grid;
     justify-items: center;
     padding-top: 2rem;
+    background-color: green; /* ELIMINAR */
 }
 
 h1{
@@ -194,6 +198,7 @@ h4{
 
     margin: 0 auto;
     margin-top: 50px;
+    background-color: blue; /* ELIMINAR */
 }
 
 article.product{
@@ -282,6 +287,7 @@ footer{
     margin: 1rem;
     display: grid;
     justify-content:start;
+    font-family: 'poppR';
 }
 
 .about-footer li{
@@ -308,15 +314,16 @@ footer{
 
 .info-footer{
     margin: 1rem;
-
     display: grid;
     justify-content:flex-end;
+    font-family: 'poppR';
     
 }
 
 .info-footer p,li{
     display: grid;
     justify-content:flex-end;
+    font-family: 'poppR';
 }
 
 

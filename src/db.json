@@ -1,0 +1,280 @@
+{
+    "data": [
+            {
+              "id": 1,
+              "model": "Apple iPhone 15 Pro Max",
+              "brand": "iPhone",
+              "mrp": 1469,
+              "price": 1399,
+              "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/1/1777512-5029491.jpg?&w=380&h=380&trim=auto&auto=format",
+              "ram": "A17 Pro",
+              "storage": "258GB",
+              "description": "iPhone. Forjado en titanio.El iPhone 15 Pro es el primer iPhone con diseño de titanio de calidad aeroespacial, y está fabricado con la misma aleación que usan las naves espaciales en las misiones a Marte",
+              "camera": "48mp"
+            },
+            {
+              "id": 2,
+              "model": "Apple iPhone 15 Plus",
+              "brand": "iPhone",
+              "mrp": 1109,
+              "price": 1049,
+              "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/3/1777534-5029577.jpg?&w=380&h=380&trim=auto&auto=format",
+              "ram": "A17 Pro",
+              "storage": "128GB",
+              "camera": "48mp"
+            },
+            {
+            "id": 3,
+            "model": "Apple iPhone 15 Black",
+            "brand": "iPhone",
+            "mrp": 1.339,
+            "price": 1.269,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/7/5/3/1777534-5029577.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "A17 Pro",
+            "storage": "512GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 4,
+            "model": "Samsung Galaxy A23",
+            "brand": "Samsung",
+            "mrp": 329,
+            "price": 550,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/6/1/5/7/6/1615763-4681329.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "5GB",
+            "storage": "128GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 4,
+            "model": "Samsung Galaxy A23",
+            "brand": "Samsung",
+            "mrp": 329,
+            "price": 550,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/6/1/5/7/6/1615763-4681329.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "5GB",
+            "storage": "128GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 5,
+            "model": "Samsung Galaxy Z Flip5",
+            "brand": "Samsung",
+            "mrp": 1.209,
+            "price": 1.149,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/0/1/4/1770148-5013099.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "8GB",
+            "storage": "128GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 6,
+            "model": "Samsung Galaxy Z Fold5",
+            "brand": "Samsung",
+            "mrp": 1.909,
+            "price": 1.979,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/0/4/0/1770404-5013161.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "12GB",
+            "storage": "256GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 7,
+            "model": "Samsung Galaxy Z Fold5 Green",
+            "brand": "Samsung",
+            "mrp": 1.209,
+            "price": 1.149,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/0/1/4/1770148-5013099.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "8GB",
+            "storage": "256GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 8,
+            "model": "Samsung Galaxy Z Fold5 Cream",
+            "brand": "Samsung",
+            "mrp": 2.029,
+            "price": 1.999,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/0/5/3/1770534-5013179.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "12GB",
+            "storage": "512GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 9,
+            "model": "Samsung Galaxy S23 ültra",
+            "brand": "Samsung",
+            "mrp": 1.409,
+            "price": 1.299,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/2/0/2/9/1720295-4892683.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "8GB",
+            "storage": "256GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 10,
+            "model": "OPPO A57s",
+            "brand": "OPPO",
+            "mrp": 209,
+            "price": 139,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/6/7/5/9/1/1675910-4812764.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "128GB",
+            "storage": "4GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 9,
+            "model": "OPPO A17",
+            "brand": "OPPO",
+            "mrp": 119,
+            "price": 119,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/6/7/5/7/0/1675707-5091518.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "64GB",
+            "storage": "4GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 10,
+            "model": "OPPO A98",
+            "brand": "OPPO",
+            "mrp": 299,
+            "price": 299,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/5/4/2/9/1754290-4966816.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "256GB",
+            "storage": "8GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 11,
+            "model": "Redmi Note 10",
+            "brand": "Xiaomi",
+            "mrp": 249,
+            "price": 179,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/2/5/4/5/6/1254563-3910496.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "4GB",
+            "storage": "64GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 12,
+            "model": "Poco X4 Pro",
+            "brand": "Xiaomi",
+            "mrp": 296.40,
+            "price": 296.40,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/5/1/0/8/4/1510847-4431359.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "4GB",
+            "storage": "128GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 13,
+            "model": "ZTE Blade V40",
+            "brand": "ZTE",
+            "mrp": 201,
+            "price": 109,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/6/3/1/5/4/1631543-4873508.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "4GB",
+            "storage": "128GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 14,
+            "model": "ZTE Blade A73",
+            "brand": "ZTE",
+            "mrp": 149,
+            "price": 129,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/6/0/7/1776077-5027361.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "6GB",
+            "storage": "128GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 15,
+            "model": "Vivo Y36 Gold",
+            "brand": "Vivo",
+            "mrp": 299,
+            "price": 219,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/7/0/1/3/1770131-5008284.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "8GB",
+            "storage": "256GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 16,
+            "model": "TCL 40 SE",
+            "brand": "TCL",
+            "mrp": 169,
+            "price": 129,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/4/0/8/3/1740839-4927791.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "4GB",
+            "storage": "128GB",
+            "camera": "48mp"
+        },
+        {
+            "id": 17,
+            "model": "Xiaomi 13 Lite",
+            "brand": "Xiaomi",
+            "mrp": 445,
+            "price": 549,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/3/2/0/3/1732038-4907288.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "8GB",
+            "storage": "256GB",
+            "camera": "50mp"
+        },
+        {
+            "id": 18,
+            "model": "Xiaomi Redmi 12",
+            "brand": "Xiaomi",
+            "mrp": 199,
+            "price":179,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/7/5/8/9/6/1758965-4979524.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "4GB",
+            "storage": "128GB",
+            "camera": "50mp"
+        },
+        {
+            "id": 19,
+            "model": "Xiaomi Redmi A1 ",
+            "brand": "Xiaomi",
+            "mrp": 149,
+            "price": 89,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/6/3/1/5/4/1631546-4678164.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "2GB",
+            "storage": "32GB",
+            "camera": "8mp"
+        },
+        {
+            "id": 20,
+            "model": "Huawei Mate 10 Pro",
+            "brand": "Huawei",
+            "mrp": 1490.93,
+            "price": 1490.93,
+            "image": "https://cdn.phonehouse.es/res/product450/resource_368950.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "6GB",
+            "storage": "128GB",
+            "camera": "20mp"
+        },
+        {
+            "id": 21,
+            "model": "Huawei Mate 10 Lite",
+            "brand": "Huawei",
+            "mrp": 316.87,
+            "price": 316.87,
+            "image": "https://cdn.phonehouse.es/res/product450/resource_361254.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "4GB",
+            "storage": "64GB",
+            "camera": "13mp"
+        },
+        {
+            "id": 21,
+            "model": "Huawei Mate 20 Lite",
+            "brand": "Huawei",
+            "mrp": 197.99,
+            "price": 197.99,
+            "image": "https://cdn.phonehouse.es/res/products-image/1/4/4/3/2/9/1443299-4306161.jpg?&w=380&h=380&trim=auto&auto=format",
+            "ram": "4GB",
+            "storage": "64GB",
+            "camera": "24mp"
+        }
+    ]
+}

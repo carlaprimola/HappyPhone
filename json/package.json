@@ -1,0 +1,15 @@
+{
+  "name": "creando-formulario-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login2 copy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

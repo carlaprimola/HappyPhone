@@ -1,12 +1,12 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - HappyPhone</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600;800&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="../css/form.css">
     
 </head>
@@ -29,7 +29,7 @@
       <div class="box">
         <div class="inner-box hero">
           <div class="forms-wrap">
-            <form action="index.html" autocomplete="off" class="sign-in-form" id="signInForm">
+            <form action="../index.html" autocomplete="off" class="sign-in-form styleSignIn">
               <!-- <div class="logo">
                 <img src="." alt="easyclass" />
                 <h4>HappyPhone</h4>
@@ -41,32 +41,37 @@
                 <a href="#" class="toggle">Regístrate aquí</a>
               </div>
 
-              <div class="actual-form formGroup" >
+              <div class="formGroup" >
                 <div class="input-wrap">
+                  <label id="user-error"></label>
+
                   <input
                     type="text"
                     minlength="4"
                     class="input-field"
                     autocomplete="off"
                     required
-                    id="user"
-                    
+                    id="user-field"
+                    onkeyup="validateUser()"
                   />
+
                   <label id="user">Usuario</label>
                 </div>
-                <p id="errorMessage" hidden></p>
+            
 
 
                 <div class="input-wrap">
+                  <label id="password-error"></label>
                   <input
                     type="password"
                     minlength="4"
                     class="input-field"
                     autocomplete="off"
                     required
-                    id="password"
+                    id="password-field"
+                    onkeyup="validatePassword()"
                   />
-                  <label>Contraseña</label>
+                  <label id="password">Contraseña</label>
                 </div>
 
                 <button type="submit" value="submit" class="sign-btn">Inicia Sesión</button>
@@ -79,23 +84,20 @@
             </form>
 
             <!-- Formulario registro -->
-            <form action="index.html" autocomplete="off" class="sign-up-form" id="registrationForm">
+            <form action="../index.html" autocomplete="off" class="sign-up-form" id="registrationForm">
               <!-- <div class="logo">
                 <img src="./img/logo.png" alt="easyclass" />
                 <h4>easyclass</h4>
               </div> -->
-
-
-
               
               <div class="heading">
                 <h2>Registro</h2>
                 <h6>¿Ya tienes cuenta con nosotros?</h6>
                 <a href="#" class="toggle">Inicia sesión</a>
               </div>
-              <div class="actual-form formGroup" >
+              <div class="formGroup " >
                 <div class="input-wrap">
-                  
+                  <label id="user-error2"></label>
                  
                   <input
                     type="text"
@@ -103,14 +105,12 @@
                     class="input-field"
                     autocomplete="off"
                     required
-                    id="user"
-                    
+                    id="user-field2"
+                    onkeyup="validateUser2()"
                   />
-                  <label id="user">Usuario</label>
+                  <label id="user2">Usuario</label>
                   
                 </div>
-              
-
 
                 <div class="input-wrap">
                   <label id="email-error"></label>
@@ -119,61 +119,80 @@
                     type="email"
                     class="input-field"
                     autocomplete="off"
-                    
                     id="email-field"
+                    required
                     onkeyup="validateEmail()"
-                    
                   />
 
                   <label id="email">Email</label>
                 </div>
 
                 <div class="input-wrap">
+                  <label id="password-error2"></label>
+
+
                   <input
                     type="password"
                     minlength="4"
                     class="input-field"
                     autocomplete="off"
                     required
-                    onkeyup="validateEmail()"
+                    id="password-field2"
+                    onkeyup="validatePassword2()"
                   />
-                  <label>Contraseña</label>
 
-          
+                  <label id="password2">Contraseña</label>
                 </div>
+             
 
                 <button type="submit" value="Sign Up" class="sign-btn">Regístrate</button>
 
+                <!-- <div class="form-group" id="captcha modal">
+                  <div class="preview"></div>
+                  <div class="captcha_form">
+                      <input required type="text" 
+                      autocomplete="off" 
+                      id="captcha_form" 
+                      class="form_input_captcha" 
+                      placeholder="Verifica que no eres un bot ">
+                      <button class="captcha_refresh">
+                        <i class="fa fa-refresh"></i>
+                      </button>
+                  </div>
+                  </div> -->
+                  <div>
+                    <div class="g-recaptcha" data-sitekey="6LcB9TQpAAAAAAojSyJ7Zv8JPDOpV0Mq4ylt0Pga">
+                    </div>
+                    
+                  </div>
+
+
+                
                 <p class="text">
                  He leído y estoy deacuerdo con los
                   <a href="#">Términos y servicios</a> y la
                   <a href="#">Política de Privacidad</a>
                 </p>
               </div>
+
+           
+              
             </form>
           </div>
 
-          <div class="carousel">
-            <div class="images-wrapper">
-              <img src="./img/" class="image img-1 show" alt="" />
-              <img src="./img/image2.png" class="image img-2" alt="" />
-              <img src="./img/image3.png" class="image img-3" alt="" />
-            </div>
 
-            <div class="text-slider">
-              <div class="text-wrap">
-                <div class="text-group">
-                  <h2>Create your own courses</h2>
-                  <h2>Customize as you like</h2>
-                  <h2>Invite students to your class</h2>
-                </div>
+         
+
+
+          <div class="sideImage">
+                  <h2 class="text-group"> Más de 10mil productos </h2>
               </div>
 
-              <div class="bullets">
+              <!-- <div class="bullets">
                 <span class="active" data-value="1"></span>
                 <span data-value="2"></span>
                 <span data-value="3"></span>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -217,6 +236,9 @@
 
     
    
+
+
+
 
 
 

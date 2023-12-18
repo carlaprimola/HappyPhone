@@ -83,7 +83,7 @@ figure.logo-rrss img {
     border: 1px solid black;
 } 
 
-main {
+/* main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -92,18 +92,19 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Aquí defines la sombra */
   padding: 20px;
-}
+} */
 
 .box {
   position: relative;
   width: 100%;
   max-width: 1020px;
   height: 640px;
-  background-color: #ffffff;
+  background-color: #F5F5F5;
   border-radius: 0.5rem;
-  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+  box-shadow: 50px 60px 50px -30px rgb(145, 145, 145);
+  margin-left: 20%;
+  margin-top:5%;
 }
 
 .inner-box {
@@ -138,13 +139,11 @@ form {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   transition: opacity 0.02s 0.4s;
-
 }
-
-
-
-
-
+/* 
+.formGroup{
+margin-bottom:0%;
+} */
 
 
 form.sign-up-form {
@@ -200,13 +199,18 @@ form.sign-up-form {
   margin-bottom: 2rem;
 }
 
-#email-error{
+#email-error, #user-error, #user-error2, #password-error, #password-error2{
     position: absolute;
     margin-top: 0.2rem;
     color:red;
     transition:top 0.5s;
+    font-size:0.8rem;
     
 }
+
+
+
+
 .input-field {
   position: absolute;
   width: 100%;
@@ -241,6 +245,7 @@ label {
   top: -2px;
 }
 
+/* Reemplaza esto */
 .sign-btn {
   display: inline-block;
   width: 100%;
@@ -255,8 +260,22 @@ label {
   transition: 0.3s;
 }
 
+
+
+/* con esto */
+.sign-btn.style-register {
+  margin-top: 7rem;
+  z-index: 3;
+}
+
+
+.style-register{
+margin-top: 7rem;
+z-index: 3;
+}
+
 .sign-btn:hover {
-  background-color: #8371fd;
+  background-color: #5dc3eb;
 }
 
 .text {
@@ -287,17 +306,18 @@ main.sign-up-mode .forms-wrap {
   left: 55%;
 }
 
-main.sign-up-mode .carousel {
+main.sign-up-mode .sideImage {
   left: 0%;
 }
 
-.carousel {
+.sideImage {
   position: absolute;
   height: 100%;
   width: 55%;
   left: 45%;
   top: 0;
-  background-color: #80b8d4;
+  background-image: url(../img/gifform.gif);
+  background-size: cover;
   border-radius: 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -306,21 +326,22 @@ main.sign-up-mode .carousel {
   transition: 0.8s ease-in-out;
 }
 
-.images-wrapper {
+/* .images-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-}
+} */
 
 .image {
   width: 100%;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  opacity: 0;
+  height: auto;
+  /* grid-column: 1/2;
+  grid-row: 1/2; */
+  /* opacity: 0; */
   transition: opacity 0.3s, transform 0.5s;
 }
 
-.img-1 {
+/* .img-1 {
   transform: translate(0, -50px);
 }
 
@@ -333,59 +354,118 @@ main.sign-up-mode .carousel {
 }
 
 .image.show {
-  opacity: 1;
+  opacity: 3;
   transform: none;
-}
+} */
 
-.text-slider {
+.text-group{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.text-wrap {
-  max-height: 2.2rem;
-  overflow: hidden;
-  margin-bottom: 2.5rem;
-}
-
-.text-group {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  transform: translateY(0);
+  transform: translateY(700%);
   transition: 0.5s;
-}
-
-.text-group h2 {
   line-height: 2.2rem;
   font-weight: 600;
   font-size: 1.6rem;
 }
 
-.bullets {
+/* Para el captcha */
+
+
+
+
+.captcha_form {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.bullets span {
-  display: block;
-  width: 0.5rem;
-  height: 0.5rem;
-  background-color: #aaa;
-  margin: 0 0.25rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
+.captcha_form #captcha_form input {
+  width: 100%;
+  font-size: 1em;
+  border-radius: .5em;
+  outline: none;
+  padding: 1em;
+  z-index: 1;
+  background: none;
 }
 
-.bullets span.active {
-  width: 1.1rem;
-  background-color: #151111;
-  border-radius: 1rem;
+.captcha_refresh {
+  width: 50px;
+  font-size: 1em;
+  border-radius: .5em;
+  outline: none;
+  padding: 1em;
+  z-index: 1;
+  background:none;
 }
+
+.preview span{
+  display: inline-block;
+  user-select: none;
+}
+
+.form_input_captcha{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  border: .1em solid #e0dadd;
+  border-radius: .5em;
+  outline: none;
+  padding: 1em;
+  z-index: 2;
+  background: none;
+}
+
+.form_label_captcha{
+  position: absolute;
+  left: 1em;
+  top: 9.2em;
+  padding: 0 .25em;
+  background: none;
+  color: #345e7f;
+  font-size: 1em;
+  transition: .4s;
+  }
+
+.form_input_captcha:focus + .form_label_captcha{
+  top: 9.8em;
+  left: .8em;
+  color: rgb(28,164,248);
+  font-size: .8em;
+  font-weight: 400;
+  z-index: 5;
+
+}
+
+
+.form_label_captcha:not(:placeholder-shown).form_input_captcha:not(:focus) + .form_label_captcha{
+  top: 4.6em;
+  left: .0.8em;
+  font-size: .8em;
+  font-weight: 600;
+  z-index: 5;
+  }
+
+  .form_input_captcha:focus{
+      border: .1em solid #ff0000;
+  }
+
+
+  .form-group {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 100%;
+    height:60%;
+    margin-top: 30%;
+   
+}
+
+
+
 
 @media (max-width: 850px) {
   .box {
@@ -418,6 +498,7 @@ main.sign-up-mode .carousel {
     margin: 2rem 0;
   }
 
+
   form.sign-up-form {
     transform: translateX(100%);
   }
@@ -430,7 +511,7 @@ main.sign-up-mode .carousel {
     transform: translateX(0%);
   }
 
-  .carousel {
+  .sideImage {
     position: revert;
     height: auto;
     width: 100%;
@@ -460,7 +541,7 @@ main.sign-up-mode .carousel {
     padding: 1rem;
   }
 
-  .carousel {
+  .sideImage {
     padding: 1.5rem 1rem;
     border-radius: 1.6rem;
   }
@@ -510,10 +591,10 @@ main.sign-up-mode .carousel {
    
 }
 
-.form-group a{
+/* .form-group a{
     text-decoration: none;
     color: #2F8F97;
-}
+} */
 
 /* Media query para pantallas más pequeñas */
 @media screen and (max-width: 1000px) {

@@ -146,8 +146,11 @@ form.addEventListener('submit',(e)=>{
 
   const captchaResponse = grecaptcha.getResponse();
 
-  if (!captchaResponse.length >0){
-    throw new Error("Captcha not complete");
+
+  if (!captchaResponse.length > 0) {
+    // Muestra una alerta si el reCAPTCHA no está completo
+    alert("Por favor, completa el reCAPTCHA antes de enviar el formulario.");
+    return;
   }
 
   window.location.href = "../index.html";

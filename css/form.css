@@ -55,11 +55,11 @@ header ul {
 
 a {
     text-decoration: none;
-    color: #000;
+    color:#ffffff
 }
 
 a:hover {
-    color: #2F8F97;
+    color: #428182;
 }
 
 .menu-section:hover {
@@ -472,6 +472,8 @@ main.sign-up-mode .sideImage {
     height: auto;
     max-width: 550px;
     overflow: hidden;
+    margin-left: 0%;
+    margin-top:20%;
   }
 
   .inner-box {
@@ -609,11 +611,9 @@ main.sign-up-mode .sideImage {
 /*FOOTER*/
 
 footer {
-    background-color: #D9D9D9;
-
+    background-color: #000000;
     width: 100%;
     margin-top: 222px;
-
 
     display: grid;
     grid-template-columns: 5fr 1fr 5fr;
@@ -621,15 +621,19 @@ footer {
 }
 
 .about-footer {
-    margin: 1rem;
+    margin: 2rem;
     display: grid;
     justify-content: start;
+    
 }
+
+
 
 .about-footer li {
     display: grid;
     justify-content: flex-start;
 }
+
 
 .rrss-footer {
     display: flex;
@@ -650,7 +654,6 @@ footer {
 
 .info-footer {
     margin: 1rem;
-
     display: grid;
     justify-content: flex-end;
 
@@ -660,4 +663,8 @@ footer {
 li {
     display: grid;
     justify-content: flex-end;
+}
+
+.font-style{
+  color: #345e7f;
 }

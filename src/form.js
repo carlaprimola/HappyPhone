@@ -25,100 +25,7 @@ function moveSlider() {
   images.forEach((img) => img.classList.remove("show"));
   currentImage.classList.add("show");
 
-  // const textSlider = document.querySelector(".text-group");
-  // textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
-
- 
 }
-
-
-
-
-//Codigo para que funcione el captha
-    //This event listener is triggered when the HTML document has been completely loaded and parsed.
-    document.addEventListener("DOMContentLoaded", function () {
-      const inputbox = document.querySelector(".captcha_form input"); //It selects the input box inside an element  
-      const login = document.querySelector(".form .botons");          //with the class "captcha_form" and the button 
-                                                                      //inside an element with the class "form" and "botons".
-  
-  
-      //This event is triggered when a key is released in the input box. It checks if the input has any 
-      //non-whitespace characters. If yes, it adds the "active" class to the login button; otherwise, it removes the class.
-      inputbox.onkeyup = () => {
-          let userdata = inputbox.value;
-          if (userdata.trim() !== "") {
-              login.classList.add("active");
-          } else {
-              login.classList.remove("active");
-          }
-      };
-      
-      // (Captcha Generation) Functions to generate a random captcha value and store it in the captchavalue variable.
-      const fonts = ['cursive'];
-      let captchavalue = "";
-  
-      function gencaptch() {
-          // Generating a random number, multiplying it by 10000000, and converting it to base64
-          let value = btoa(Math.random() * 10000000);
-      
-          // Taking a substring of the generated base64 value
-          value = value.substr(0, 5 + Math.random() * 5);
-      
-          // Setting the generated value to the captchavalue variable
-          captchavalue = value;
-      }
-      //(Captcha Rendering) Function to render the captcha value with randomized rotation and font styling 
-      //into an HTML element with the class "preview".
-      function setcaptcha() {
-          let previewElement = document.querySelector(".preview");
-          let captchaElement = document.querySelector(".captcha_form");
-          
-          console.log("Preview Element:", previewElement);
-          console.log("Preview Element:", captchaElement);
-      
-          if (previewElement) {
-              let html = captchavalue.split("").map((char) => {
-                  const rotate = -20 + Math.trunc(Math.random() * 50);
-                  const font = Math.trunc(Math.random() * fonts.length);
-      
-                  return `<span style="transform:rotate(${rotate}deg); font-family:${fonts[font]};">${char}</span>`;
-              }).join("");
-      
-              previewElement.innerHTML = html;
-          } else {
-              console.error("Preview element not found.");
-          }
-      }
-      //(Initialization) Function to initialize the captcha on page load, including setting up the initial captcha, 
-      //and adding a click event listener to refresh the captcha.
-      function initcaptcha() {
-          gencaptch();
-          setcaptcha();
-  
-          document.querySelector(".captcha_form .captcha_refresh").addEventListener("click", function () {
-              console.log("Refresh button clicked!");
-              gencaptch();
-              setcaptcha();
-          });
-          gencaptch();
-          setcaptcha();
-      }
-  
-      // Call initcaptcha to initialize captcha when the page loads
-      initcaptcha();
-  
-      //(Login Validation) Event listener for the click event on the login button. It checks if the entered 
-      //captcha value matches the generated captcha value and shows a corresponding alert message.
-  
-      document.querySelector(".form .botons").addEventListener("click", function () {
-          let inputcaptchavalue = document.querySelector(".form #captcha_form").value;
-          if (inputcaptchavalue === captchavalue) {
-              alert("log in successful");
-          } else {
-              alert("invalid captcha");
-          }
-      });
-  });
 
 
 //Validación de formulario
@@ -180,8 +87,8 @@ function validateEmail(){
 function validatePassword(){
   passwordLabel.style.bottom = "45px";
 
-  if(!passwordField.value.match(/^.{4,12}$/)){  // Elimina la coma adicional
-      passwordError.innerHTML = "La contraseña debe ser de 4-16 caracteres";  // Corrige el mensaje de error
+  if(!passwordField.value.match(/^.{4,12}$/)){  
+      passwordError.innerHTML = "La contraseña debe ser de 4-16 caracteres"; 
       passwordField.style.borderBottomColor = "red";
       passwordError.style.top = "120%";
       return false;
@@ -198,8 +105,8 @@ function validatePassword(){
 function validatePassword2(){
   passwordLabel2.style.bottom = "45px";
 
-  if(!passwordField2.value.match(/^.{4,12}$/)){  // Elimina la coma adicional
-      passwordError2.innerHTML = "La contraseña debe ser de 4-16 caracteres";  // Corrige el mensaje de error
+  if(!passwordField2.value.match(/^.{4,12}$/)){  
+      passwordError2.innerHTML = "La contraseña debe ser de 4-16 caracteres";  
       passwordField2.style.borderBottomColor = "red";
       passwordError2.style.top = "120%";
       return false;
@@ -226,3 +133,102 @@ function validateUser2(){
   userError2.style.top = "100%";
   return true;
 }
+
+
+
+
+
+
+const form = document.querySelector('#registrationForm');
+
+form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+
+  const captchaResponse = grecaptcha.getResponse();
+
+
+  if (!captchaResponse.length > 0) {
+    // Muestra una alerta si el reCAPTCHA no está completo
+    alert("Por favor, completa el reCAPTCHA antes de enviar el formulario.");
+    return;
+  }
+
+  window.location.href = "../index.html";
+
+
+  const fd =new FormData(e.target);
+  const params =new URLSearchParams(fd);
+
+  fetch ('http://localhost:3000/upload',{
+    method:"POST",
+    body:params,
+
+  })
+
+
+  .then(res=> res.json())
+  .then (data=> {
+    if (data.captchaSuccess){
+     console.log("Validación correcta");
+    }else{
+      console.error("Validation incorrecta");
+    }
+  })
+
+  .catch(err => console.error(err))
+
+})
+
+
+
+//Código necesario para que aparezca las imagenes en el captcha
+
+
+const express = require ('express');
+const cors = require('cors');
+const app= express();
+const port =3000;
+
+
+app.use(cors());
+
+app.use(express.urlencoded(
+    {
+        extend:false 
+    }
+))
+
+
+app.post('/upload', function(req, res){
+
+
+    const params = new URLSearchParams({
+        secret:'6LcB9TQpAAAAAN9czsF1XP84nPO_WvcLkz-pYb0R',
+    
+        response:req.body['g-recaptcha-response'],
+        remoteip: req.ip,
+    });
+    
+
+
+    fetch ('https://www.google.com/recaptcha/api/siteverify',{
+        method:"POST",
+        body:params,
+    })
+    .then(res =>res.json())
+    .then(data =>{
+        if (data.success){
+            res.json({captchaSuccess:true});
+        }
+        else{
+            res.json({captchaSuccess:false});
+        }
+    })
+
+
+});
+
+app.listen(port,()=>{
+    console.log(`App running on port ${port}`);
+})
+

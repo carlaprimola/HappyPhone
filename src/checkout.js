@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Mostrar la lista de productos y el total en la página
+  // Llamar a la función para actualizar la página de checkout
   updateCheckoutPage();
 });
+// Función para calcular el total del carrito
+function calculateTotal(cartItems) {
+  return cartItems.reduce((sum, product) => sum + product.price, 0);
+}
+
 
 function updateCheckoutPage() {
   const checkoutProductsList = document.getElementById('checkoutProductsList');
@@ -15,37 +20,52 @@ function updateCheckoutPage() {
   checkoutProductsList.innerHTML = '';
 
   cartItems.forEach((product, index) => {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = `
-      <input type="checkbox" class="product-checkbox" data-index="${index}"> 
-      ${product.model} - ${product.price.toFixed(2)}€
-    `;
-    checkoutProductsList.appendChild(listItem);
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `
+          ${product.model} - ${product.price}€ 
+          <input type="checkbox" class="product-checkbox" data-index="${index}">
+          <button class="remove-product-button" data-index="${index}"><i class="fa-solid fa-trash-can"></i></button>
+      `;
+      checkoutProductsList.appendChild(listItem);
   });
 
-  checkoutTotal.textContent = cartTotal.toFixed(2) + '€';
+  checkoutTotal.textContent = cartTotal+ '€';
 
-  // Manejar clic en el botón para eliminar artículos seleccionados
+  // Manejar clic en el botón para eliminar productos seleccionados
   removeSelectedButton.addEventListener('click', function () {
-    // Obtener todos los checkboxes seleccionados
-    const selectedCheckboxes = document.querySelectorAll('.product-checkbox:checked');
+      // Obtener todos los checkboxes seleccionados
+      const selectedCheckboxes = document.querySelectorAll('.product-checkbox:checked');
 
-    // Crear una lista de índices de artículos a eliminar
-    const indicesToRemove = Array.from(selectedCheckboxes).map(checkbox => parseInt(checkbox.dataset.index));
+      // Crear una lista de índices de productos a eliminar
+      const indicesToRemove = Array.from(selectedCheckboxes).map(checkbox => parseInt(checkbox.dataset.index));
 
-    // Eliminar los artículos seleccionados del carrito
-    indicesToRemove.sort((a, b) => b - a).forEach(index => cartItems.splice(index, 1));
+      // Eliminar los productos seleccionados del carrito
+      indicesToRemove.sort((a, b) => b - a).forEach(index => cartItems.splice(index, 1));
 
-    // Actualizar el localStorage con los cambios
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    localStorage.setItem('cartTotal', calculateTotal(cartItems));
+      // Actualizar el localStorage con los cambios
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      localStorage.setItem('cartTotal', calculateTotal(cartItems));
 
-    // Actualizar la lista y el total en la página
-    updateCheckoutPage();
+      // Actualizar la lista y el total en la página
+      updateCheckoutPage();
+  });
+
+  // Manejar clic en el botón para eliminar un producto específico
+  const removeProductButtons = document.querySelectorAll('.remove-product-button');
+  removeProductButtons.forEach(button => {
+      button.addEventListener('click', function () {
+          const indexToRemove = parseInt(button.dataset.index);
+          cartItems.splice(indexToRemove, 1);
+
+          // Actualizar el localStorage con los cambios
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+          localStorage.setItem('cartTotal', calculateTotal(cartItems));
+
+          // Actualizar la lista y el total en la página
+          updateCheckoutPage();
+      });
   });
 }
 
-// Función para calcular el total del carrito
-function calculateTotal(cartItems) {
-  return cartItems.reduce((sum, model) => sum + model.price, 0);
-}
+
+

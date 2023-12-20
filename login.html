@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/login.css">
     
 </head>
-<body>
+<body>  
     
         <header>
             <div><a href="./index.html"><img class="logo-web" src="./img/logo.png" alt="logo_HappyPhone"></a></src></div>
@@ -24,53 +24,66 @@
             </nav>
         </header>
         <main class="contacto">
-            <section class="formulario">               
+            <section class="formulario" id="formulario">               
                 <h4>INICIO DE SESIÓN</h4>
+
                 <form action="#" method="post">                    
-                    <div class="form-group">
-                        <label>
+                    <div class="form-group paraValidar" id="grupo__correo">  
+                    <div class="form__input">
+                        <label class="formulario__label">
                             <img class="logo-user" src="./IMG/envelope.png" alt="email">
-                            <input class="control" id="email" name="email" placeholder="Email" required>
+                            <input class="control" id="email" name="email" placeholder="Email" >
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </label>
                     </div>
-                    <div class="form-group">
-                        <label>
+
+                    </div>
+                    <div class="form-group paraValidar"  id="grupo__password">
+                        <div class="form__input">
+
+                        <label class="formulario__label">
                             <img class="logo-user" src="./IMG/password.png" alt="contraseña">   
-                            <input class="control" id="password" name="password" type="password" placeholder="Password" required> 
-                        </label>  
+                            <input class="control" id="password" name="password" type="password" placeholder="Password" > 
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </label> 
+
+                    </div>
+
                     </div>  
                     <div class="form-group">
                         <label>
                             <a href="./login.html" target="_blank"><p>¿Olvidaste la contraseña?</p></a>
                         </label>
                     </div>
-                    <div class="form-group">
+
+                    <div class="form-group paraValidar formulario__grupo-btn-enviar">
                         <label>            
-                            <button class="botons" type="submit" formaction="index.html" formtarget="_blank">Iniciar sesión</button>
+                            <button class="botons formulario__btn" type="submit" formaction="index.html" formtarget="_blank">Iniciar sesión</button>
                         </label>
+
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
                     </div>            
                     <br>
-                    <div class="form-group">
-                        <label class="check-term">
-                            <input type="checkbox" required>
-                            <p>*Acepto los <a href="./terms.html"> Términos y Condiciones</p></a>
+
+                    <div class="form-group paraValidar" id="grupo__terminos">
+                        <label class="check-term formulario__label">
+                            <input type="checkbox">
+                            <p>*Acepto los <a href="./terms.html">Términos y Condiciones</p></a>
                         </label>  
                     </div>
+
+
                     <div class="form-group2">
                         <label>
                             <a href="./register.html" target="_blank"><p><strong>Crear cuenta</strong></p></a> 
                         </label>
-                    </div>              
+                    </div>         
+                         
                 </form>
             </section>
         </main>
     
     
-   
-
-
-
-
 
         <!--FOOTER-->
         <footer>
@@ -99,6 +112,7 @@
         </footer>
     </section>
     
+    <script src="./js/login.js"></script>
 </body>
 </html>
 

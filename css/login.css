@@ -61,7 +61,7 @@ a:hover {
     color: #297780;
 }
 
-.logo-web {
+.logo-web{
     width: 4rem;
     display: grid;
     justify-content: start;
@@ -81,13 +81,9 @@ figure.logo-rrss img {
     /* background-color: red; */
     /* border: 3px solid black; */
     height: 100vh;
-
     display: grid;
     grid-template-rows: 1fr 6fr 4fr 1fr;
-
-
 }
-
 
 /*FORMULARIO REGISTRO*/
 
@@ -106,11 +102,11 @@ h4{
     color: #333;
 }
 
-.formulario{
+.formulario {
     display: flex;
     text-align: center;
     color: #000000;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border: 1px solid #fefefe;
     padding: 50px;
     border-radius: 10px;
@@ -122,6 +118,27 @@ h4{
     flex-direction: column;
     justify-content: center;
 }
+
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.paraValidar-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.paraValidar-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.paraValidar-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
     .formulario {

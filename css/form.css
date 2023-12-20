@@ -53,6 +53,8 @@ header ul {
     font-size: large;
 }
 
+
+/* estilo de los a href */
 a {
     text-decoration: none;
     color:#ffffff
@@ -61,6 +63,8 @@ a {
 a:hover {
     color: #428182;
 }
+
+
 
 .menu-section:hover {
     cursor: pointer;
@@ -140,11 +144,6 @@ form {
   grid-row: 1 / 2;
   transition: opacity 0.02s 0.4s;
 }
-/* 
-.formGroup{
-margin-bottom:0%;
-} */
-
 
 form.sign-up-form {
   opacity: 0;
@@ -341,22 +340,7 @@ main.sign-up-mode .sideImage {
   transition: opacity 0.3s, transform 0.5s;
 }
 
-/* .img-1 {
-  transform: translate(0, -50px);
-}
 
-.img-2 {
-  transform: scale(0.4, 0.5);
-}
-
-.img-3 {
-  transform: scale(0.3) rotate(-20deg);
-}
-
-.image.show {
-  opacity: 3;
-  transform: none;
-} */
 
 .text-group{
   display: flex;
@@ -375,7 +359,7 @@ main.sign-up-mode .sideImage {
 
 
 
-.captcha_form {
+/* .captcha_form {
   display: flex;
 }
 
@@ -387,9 +371,9 @@ main.sign-up-mode .sideImage {
   padding: 1em;
   z-index: 1;
   background: none;
-}
+} */
 
-.captcha_refresh {
+/* .captcha_refresh {
   width: 50px;
   font-size: 1em;
   border-radius: .5em;
@@ -397,14 +381,14 @@ main.sign-up-mode .sideImage {
   padding: 1em;
   z-index: 1;
   background:none;
-}
+} */
 
-.preview span{
+/* .preview span{
   display: inline-block;
   user-select: none;
-}
+} */
 
-.form_input_captcha{
+/* .form_input_captcha{
   position: relative;
   top: 0;
   left: 0;
@@ -417,9 +401,9 @@ main.sign-up-mode .sideImage {
   padding: 1em;
   z-index: 2;
   background: none;
-}
+} */
 
-.form_label_captcha{
+/* .form_label_captcha{
   position: absolute;
   left: 1em;
   top: 9.2em;
@@ -438,10 +422,10 @@ main.sign-up-mode .sideImage {
   font-weight: 400;
   z-index: 5;
 
-}
+} */
 
 
-.form_label_captcha:not(:placeholder-shown).form_input_captcha:not(:focus) + .form_label_captcha{
+/* .form_label_captcha:not(:placeholder-shown).form_input_captcha:not(:focus) + .form_label_captcha{
   top: 4.6em;
   left: .0.8em;
   font-size: .8em;
@@ -451,9 +435,9 @@ main.sign-up-mode .sideImage {
 
   .form_input_captcha:focus{
       border: .1em solid #ff0000;
-  }
+  } */
 
-
+/* 
   .form-group {
     position: absolute;
     top: 40%;
@@ -462,7 +446,7 @@ main.sign-up-mode .sideImage {
     height:60%;
     margin-top: 30%;
    
-}
+} */
 
 
 

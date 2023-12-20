@@ -194,7 +194,7 @@ ul .list-group{
   .navbar {
     font-size: large;
     font-weight: bold;
-    width: 225vh!important;
+    width: 210vh!important;
     position: relative!important;
     /* background-color: #26282a!important; */
     position: fixed!important;
@@ -494,28 +494,58 @@ header .nav-item{
 
 /* Estilos para pantallas aún más pequeñas (380px) */
 
-@media screen and (max-width: 380px) {
-  .menu-btn {
-    background: url(/img/menu.svg);
-    background-size: 30px;
-    background-position: center;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: 0.3s ease;
+@media screen and (max-width: 768px) {
+  .navbar {
+    font-size: medium;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
   }
-  .menu-btn.active {
-    z-index: 999;
-    background: url(/img/menu.svg);
-    background-size: 25px;
-    background-position: center;
-    transition: 0.3s ease;
+
+  .navbar-nav {
+    flex-direction: column;
   }
-  header .nav-item {
-    display: none;
+
+  .navbar-nav li {
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .carousel-container {
+    height: auto;
+  }
+
+  .carousel img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  #catalog {
+    margin-top: 10vh;
+  }
+
+  .product {
+    margin: 2vh 10px;
+  }
+
+  .pagination {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .cart-container {
+    width: 100%;
+    min-height: 70vh;
+    padding: 20px;
   }
 }
-
+@media screen and (min-width: 769px) {
+  .navbar {
+    /* Estilos específicos para pantallas medianas y grandes */
+    width: 210vh; /* O el valor que desees para pantallas grandes */
+    
+  }
+}
 
 
 

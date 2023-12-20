@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const productsPerPage = 6;
   let currentPageIndex = 0;
 
+  
 
+  
+  // Carrito
   // Manejar el clic en el enlace
   document.getElementById('checkoutLink').addEventListener('click', function (event) {
     // Prevenir la acción predeterminada del enlace (evitar que la página se cargue)
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('cartTotal', total);
 
     // Redirigir a la nueva página con los datos del carrito
-    window.location.href = 'checkout.html';
+    window.location.href = '/template/checkout.html';
   });
 
   function updateItemCount() {
@@ -65,8 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCartIcon();
     showCartList();
   }
-
-  
 
   function removeFromCart(index) {
     cart.splice(index, 1);
@@ -153,11 +154,13 @@ document.addEventListener('DOMContentLoaded', function () {
     productElement.innerHTML = `
       <img src="${product.image}" alt="${product.model}">
       <h2>${product.model}</h2>
-      <p>${product.price}</p>
+      <p>${product.price} €</p>
       <div>
         <input type="number" class="quantityInput" value="1" min="1">
         <button class="btn btn-primary addToCartBtn" data-product="${JSON.stringify(product)}">Add to Cart</button>
+         <button class="viewDetailsBtn"><i class="fa-solid fa-eye"></i></button>
       </div>
+     
     `;
 
     const addToCartBtn = productElement.querySelector('.addToCartBtn');
@@ -167,7 +170,18 @@ document.addEventListener('DOMContentLoaded', function () {
       addToCart(product, quantity);
     });
 
+    const viewDetailsBtn = productElement.querySelector('.viewDetailsBtn');
+    viewDetailsBtn.addEventListener('click', () => openProductDetailsPage(product));
+
     return productElement;
+  }
+
+  function openProductDetailsPage(product) {
+    // Construye la URL de la página de detalles del producto
+    const productDetailsURL = `/template/product.html?product=${encodeURIComponent(JSON.stringify(product))}`;
+
+    // Redirige a la nueva URL
+    window.location.href = productDetailsURL;
   }
 
   function performSearch() {
@@ -262,8 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const cartListContainer = document.getElementById('cartList');
     cartListContainer.style.display = 'block';
-}
-
+  }
 
   // Agrega un evento clic al botón de cerrar con icono
   const closeCartButton = document.getElementById('closeCartButton');
@@ -275,7 +288,6 @@ document.addEventListener('DOMContentLoaded', function () {
     cartContainer.style.display = 'none';
   }
 
-  
   fetch(apiUrl)
     .then(response => {
       if (!response.ok) {
@@ -294,6 +306,34 @@ document.addEventListener('DOMContentLoaded', function () {
     .catch(error => console.error('Error fetching or processing data:', error));
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('.carousel');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+  let currentIndex = 0;
 
+  function showImage(index) {
+      const translateValue = -index * 100 + '%';
+      carousel.style.transform = 'translateX(' + translateValue + ')';
+  }
 
+  function nextImage() {
+      currentIndex = (currentIndex + 1) % 3;
+      showImage(currentIndex);
+  }
+
+  function prevImage() {
+      currentIndex = (currentIndex - 1 + 3) % 3;
+      showImage(currentIndex);
+  }
+
+  nextButton.addEventListener('click', nextImage);
+  prevButton.addEventListener('click', prevImage);
+
+  function autoSlide() {
+      nextImage();
+  }
+
+  setInterval(autoSlide, 3000);
+});
 

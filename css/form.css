@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: 'Playpen Sans', cursive;
     font-family: 'Poppins', sans-serif;
 }
@@ -53,6 +52,9 @@ header ul {
     font-size: large;
 }
 
+<<<<<<< Updated upstream
+
+/* estilo de los a href */
 a {
     text-decoration: none;
     color:#ffffff
@@ -62,6 +64,10 @@ a:hover {
     color: #428182;
 }
 
+
+
+=======
+>>>>>>> Stashed changes
 .menu-section:hover {
     cursor: pointer;
     color: #297780;
@@ -83,17 +89,6 @@ figure.logo-rrss img {
     border: 1px solid black;
 } 
 
-/* main {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: #ffffff;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-} */
 
 .box {
   position: relative;
@@ -140,11 +135,6 @@ form {
   grid-row: 1 / 2;
   transition: opacity 0.02s 0.4s;
 }
-/* 
-.formGroup{
-margin-bottom:0%;
-} */
-
 
 form.sign-up-form {
   opacity: 0;
@@ -245,7 +235,7 @@ label {
   top: -2px;
 }
 
-/* Reemplaza esto */
+
 .sign-btn {
   display: inline-block;
   width: 100%;
@@ -262,17 +252,6 @@ label {
 
 
 
-/* con esto */
-.sign-btn.style-register {
-  margin-top: 7rem;
-  z-index: 3;
-}
-
-
-.style-register{
-margin-top: 7rem;
-z-index: 3;
-}
 
 .sign-btn:hover {
   background-color: #5dc3eb;
@@ -316,7 +295,7 @@ main.sign-up-mode .sideImage {
   width: 55%;
   left: 45%;
   top: 0;
-  background-image: url(../img/gifform.gif);
+  background-image: url(../img/imgFormulario.gif);
   background-size: cover;
   border-radius: 2rem;
   display: grid;
@@ -326,11 +305,6 @@ main.sign-up-mode .sideImage {
   transition: 0.8s ease-in-out;
 }
 
-/* .images-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-} */
 
 .image {
   width: 100%;
@@ -341,22 +315,7 @@ main.sign-up-mode .sideImage {
   transition: opacity 0.3s, transform 0.5s;
 }
 
-/* .img-1 {
-  transform: translate(0, -50px);
-}
 
-.img-2 {
-  transform: scale(0.4, 0.5);
-}
-
-.img-3 {
-  transform: scale(0.3) rotate(-20deg);
-}
-
-.image.show {
-  opacity: 3;
-  transform: none;
-} */
 
 .text-group{
   display: flex;
@@ -369,103 +328,6 @@ main.sign-up-mode .sideImage {
   font-weight: 600;
   font-size: 1.6rem;
 }
-
-/* Para el captcha */
-
-
-
-
-.captcha_form {
-  display: flex;
-}
-
-.captcha_form #captcha_form input {
-  width: 100%;
-  font-size: 1em;
-  border-radius: .5em;
-  outline: none;
-  padding: 1em;
-  z-index: 1;
-  background: none;
-}
-
-.captcha_refresh {
-  width: 50px;
-  font-size: 1em;
-  border-radius: .5em;
-  outline: none;
-  padding: 1em;
-  z-index: 1;
-  background:none;
-}
-
-.preview span{
-  display: inline-block;
-  user-select: none;
-}
-
-.form_input_captcha{
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 1em;
-  border: .1em solid #e0dadd;
-  border-radius: .5em;
-  outline: none;
-  padding: 1em;
-  z-index: 2;
-  background: none;
-}
-
-.form_label_captcha{
-  position: absolute;
-  left: 1em;
-  top: 9.2em;
-  padding: 0 .25em;
-  background: none;
-  color: #345e7f;
-  font-size: 1em;
-  transition: .4s;
-  }
-
-.form_input_captcha:focus + .form_label_captcha{
-  top: 9.8em;
-  left: .8em;
-  color: rgb(28,164,248);
-  font-size: .8em;
-  font-weight: 400;
-  z-index: 5;
-
-}
-
-
-.form_label_captcha:not(:placeholder-shown).form_input_captcha:not(:focus) + .form_label_captcha{
-  top: 4.6em;
-  left: .0.8em;
-  font-size: .8em;
-  font-weight: 600;
-  z-index: 5;
-  }
-
-  .form_input_captcha:focus{
-      border: .1em solid #ff0000;
-  }
-
-
-  .form-group {
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    width: 100%;
-    height:60%;
-    margin-top: 30%;
-   
-}
-
-
-
 
 @media (max-width: 850px) {
   .box {
@@ -589,14 +451,9 @@ main.sign-up-mode .sideImage {
 
 .logo-register{
     width: 30px;
-    /* margin: 0rem; */
+    
    
 }
-
-/* .form-group a{
-    text-decoration: none;
-    color: #2F8F97;
-} */
 
 /* Media query para pantallas más pequeñas */
 @media screen and (max-width: 1000px) {
@@ -608,63 +465,196 @@ main.sign-up-mode .sideImage {
 
 
 
-/*FOOTER*/
 
+
+
+/*FOOTER2 */
 footer {
-    background-color: #000000;
-    width: 100%;
-    margin-top: 222px;
-
-    display: grid;
-    grid-template-columns: 5fr 1fr 5fr;
-
+  margin-top: 20%;
+  bottom:0px;
+  width:100%;
+  height: auto;
+  background:#151111;
+  color:#ffffff;
 }
 
-.about-footer {
-    margin: 2rem;
-    display: grid;
-    justify-content: start;
-    
+form.form-contact {
+  margin: 0;
 }
 
 
-
-.about-footer li {
-    display: grid;
-    justify-content: flex-start;
+.footer-content{
+display: flex;
 }
 
 
-.rrss-footer {
-    display: flex;
-    align-items: center;
+.footer-content .boxfooter{
+  flex-basis:50%;
+  padding:20px 50px;
+  }
+
+
+.boxfooter h2{
+  font-size:1.15rem;
+  text-transform: uppercase;
 }
+
+.boxfooter .content{
+  margin:20px 0 0 0;
+  position:relative;
+
+}
+
+.boxfooter .content:before{
+  position:absolute;
+  content:'';
+  top:-10px;
+  height:2px;
+  width:100%;
+  background:#ffffff;
+}
+
+.boxfooter .content:after{
+  position:absolute;
+  content:'';
+  height: 2px;
+  width:15%;
+  background:#28cdd0;
+  top:-10px;
+
+
+}
+
+.left .content .rrss-footer{
+  margin:20px 0 0 0;
+}
+.left .content .rrss-footer a{
+ padding: 0 2px;
+}
+
+.left .content .rrss-footer a span{
+  height:40px;
+  width:40px;
+  background:#428182;
+  line-height: 40px;
+  text-align: center;
+  font-size:18px;
+  align-items: center;
+
+ }
+ 
+ button {
+  background-color: #3fa8c3;
+  height: 40px;
+  width: 100%;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  border:none;
+  margin-top:1rem;
+  transition:.3s;
+  color:white;
+}
+
+button:hover {
+  transform: scale(1.2);
+  transition: all .3s; 
+
+}
+
 
 .logo-rrss {
-    width: 60%;
-    margin: 1rem;
-    gap: 0;
-    transition: all .3s;
+  width: 8%;
+  margin: 0.5 rem;
+  gap: 0;
+  transition: all .3s; 
 }
-
 
 .logo-rrss:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
-.info-footer {
-    margin: 1rem;
-    display: grid;
-    justify-content: flex-end;
-
+img.icono-ubicacion{
+  margin-top: 35px;
+  width: 4%;
 }
 
-.info-footer p,
-li {
-    display: grid;
-    justify-content: flex-end;
+.center .content .text{
+  font-weight: 500;
+  padding-left:10px;
+  font-size: 1rem;
+  color: white;
+  
 }
 
-.font-style{
-  color: #345e7f;
+
+.text-contact{
+  margin-bottom: 0.5rem;
+}
+
+.right form .msg{
+  margin-top: 10px;
+  padding: 5px;
+}
+
+
+.right form .email{
+  margin-top: 10px;
+  padding:5px;
+}
+
+
+.right form input, .right form textarea{
+  width:100%;
+  font-size:1.0625 rem;
+  background:rgb(255, 255, 255);
+  padding-left:10px;
+  border:1px #fff;
+  resize: none;
+  
+}
+
+
+.right form .text{
+margin-bottom:2px;
+}
+
+.right form input:focus, .right form textarea:focus{
+ outline-color:#28cdd0
+}
+
+.right form input{
+  height:35px;
+ }
+ 
+
+@media screen and (max-width:900px){
+  footer{
+    position:relative;
+  }
+  .footer-content{
+    flex-wrap:wrap;
+    flex-direction: column;
+  }
+}
+
+
+/* estilo de los a href y listas */
+a {
+  text-decoration: none;
+
+  color:#ffffff
+}
+
+a:hover {
+  color: #28cdd0;
+}
+
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size:1.20rem;
+  
 }

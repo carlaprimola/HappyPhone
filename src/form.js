@@ -136,6 +136,7 @@ function validateUser2(){
 
 
 
+// Codigo para el captcha
 
 
 

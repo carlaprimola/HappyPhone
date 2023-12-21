@@ -18,8 +18,104 @@ body input{
 
 /*HEADER*/
 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
-header {
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+  .logo{
+    width: 80px;
+    height: 80px;
+  }
+  .navbar {
+    font-size: large;
+    font-weight: bold;
+    width: 210vh!important;
+    position: relative!important;
+    /* background-color: #26282a!important; */
+    position: fixed!important;
+    border: 2px solid black;
+
+
+  }
+  #searchButton{
+    margin-right: 2vh;
+    background: transparent;
+    color: white;
+    border: none;
+  }
+  #openCartButton{
+    background: transparent;
+    color: white;
+    border: none;
+  }
+  #searchContainer{
+    margin-top: 1vh;
+    border: none;
+  }
+  .quantityInput{
+    width: 4vh;
+    display: none;
+  }
+  .nav-item .fa-solid {
+    padding:0px 10px;
+  
+  }
+  .nav-link{
+    margin:  5px 15px;
+  }
+.navbar-nav li a{
+  color: #f0f0f0;
+}
+  .navbar-nav li:hover a {
+    color: #00e4c0; /* Color del texto al pasar el ratón */
+}
+#checkoutButton{
+  margin-left: 5vh;
+  margin-top: 2vh;
+}
+#removeSelectedButton{
+  display: none;
+}
+/* Añade estos estilos al final de tu archivo de estilos o en un nuevo archivo CSS */
+.close-cart-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #555; /* Color del icono */
+  font-size: 20px; /* Tamaño del icono */
+}
+#searchInput{
+  width: 120px;
+  border: 1px solid gray;
+}
+
+
+
+/* header {
     background-color: #D9D9D9;
     width: 100%;
 
@@ -40,9 +136,6 @@ header ul {
     display: flex;
     gap: 3rem;
     margin-right: 1rem;
-
-    /* grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-    grid-auto-flow: column; */
     justify-content: end;
     align-items: center;
 }
@@ -52,22 +145,11 @@ header ul {
     font-size: large;
 }
 
-<<<<<<< Updated upstream
-
-/* estilo de los a href */
-a {
-    text-decoration: none;
-    color:#ffffff
-}
-
-a:hover {
-    color: #428182;
-}
 
 
 
-=======
->>>>>>> Stashed changes
+
+
 .menu-section:hover {
     cursor: pointer;
     color: #297780;
@@ -88,7 +170,7 @@ figure.logo-rrss img {
     width: 30px;
     border: 1px solid black;
 } 
-
+ */
 
 .box {
   position: relative;
@@ -98,7 +180,7 @@ figure.logo-rrss img {
   background-color: #F5F5F5;
   border-radius: 0.5rem;
   box-shadow: 50px 60px 50px -30px rgb(145, 145, 145);
-  margin-left: 20%;
+  margin-left: 23%;
   margin-top:5%;
 }
 
@@ -240,7 +322,7 @@ label {
   display: inline-block;
   width: 100%;
   height: 43px;
-  background-color: #151111;
+  background-color: #111315;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -329,6 +411,12 @@ main.sign-up-mode .sideImage {
   font-size: 1.6rem;
 }
 
+
+
+
+
+/* Media querys  */
+
 @media (max-width: 850px) {
   .box {
     height: auto;
@@ -392,9 +480,14 @@ main.sign-up-mode .sideImage {
   }
 }
 
+
+
+
+
+
 @media (max-width: 530px) {
   main {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .box {
@@ -426,41 +519,34 @@ main.sign-up-mode .sideImage {
 
 
 
-@media screen and (max-width: 768px) {
-    .formulario {
-        width: 80%;
-    }
-}
 
 /* Media query para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
 
     h4 {
         font-size: 28px;
-        /* Ajusta el ancho al 100% en pantallas más pequeñas */
+      
     }
-}
-
-
-.main-form{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-
-}
-
-.logo-register{
-    width: 30px;
-    
-   
-}
-
-/* Media query para pantallas más pequeñas */
-@media screen and (max-width: 1000px) {
-    .control {
-        width: 86%;
-        /* Ajusta el ancho al 100% en pantallas más pequeñas */
+    h2.text-group {
+      line-height: 5.2rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      padding-left: 7%;
+      transform: translateY(10%);
     }
+  
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .box {
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+    margin-left: 15%;
+    margin-top:20%;
+  }
+
 }
 
 
@@ -468,7 +554,8 @@ main.sign-up-mode .sideImage {
 
 
 
-/*FOOTER2 */
+
+/*FOOTER */
 footer {
   margin-top: 20%;
   bottom:0px;
@@ -628,6 +715,10 @@ margin-bottom:2px;
  }
  
 
+ 
+
+/* 
+ Media query del footer */
 @media screen and (max-width:900px){
   footer{
     position:relative;
@@ -642,7 +733,6 @@ margin-bottom:2px;
 /* estilo de los a href y listas */
 a {
   text-decoration: none;
-
   color:#ffffff
 }
 
@@ -653,6 +743,7 @@ a:hover {
 
 ul, ol {
   list-style: none;
+  
   padding: 0;
   margin: 0;
   font-size:1.20rem;

@@ -80,50 +80,32 @@
     <button id="removeSelectedButton">Eliminar productos seleccionados</button>
     </div>
   
-  <form>
-    <label for="calle">Calle:</label>
-    <input type="text" id="calle" name="calle" required>
-
-    <label for="numero">Número:</label>
-    <input type="text" id="numero" name="numero" required>
-
-    <label for="ciudad">Ciudad:</label>
-    <input type="text" id="ciudad" name="ciudad" required>
-
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-
-    <label for="correo">Correo Electrónico:</label>
-    <input type="email" id="correo" name="correo" required>
-
-    <!-- Agrega un enlace al botón -->
-    <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-success">Realizar Pedido</a>
-  </form>
-</main>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Mensaje de Confirmación</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal Body -->
-        <div class="modal-body">
-          <p>Pedido realizado con éxito</p>
-        </div>
-        
-        <!-- Modal Footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        </div>
-        
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputEmail4">
       </div>
-    </div>
-  </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Madrid">
+      </div>
+      <div class="col-md-6">
+        <label for="inputZip" class="form-label">Codigo Postal</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+      </div>
+    </form>
 
 <footer>
   <div class="card text-center">

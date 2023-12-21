@@ -331,6 +331,14 @@ main{
   #checkoutProductsList li{
     font-size: 20px;
     margin-top: 2vh;
+    margin-right: 20vh;
+    display: flex;
+    width: 40vh;
+    gap: 1vh;
+  }
+  .row{
+    margin-top: 20vh!important;
+    margin-left: 10vh!important;
   }
   input[type=checkbox], input[type=radio] {
     box-sizing: border-box;
@@ -349,7 +357,9 @@ main{
   margin-top: 10vh;
 }
 .remove-product-button{
-  border: none;
+  border: transparent;
+  background: transparent;
+  width: 2vh;
 }
 form {
   max-width: 500px;
@@ -363,7 +373,10 @@ label {
   display: block;
   margin-top: 10px;
 }
-
+#checkoutProductsList{
+  margin-top: 5vh;
+  margin-right: 1vh;
+}
 input {
   width: 100%;
   padding: 8px;

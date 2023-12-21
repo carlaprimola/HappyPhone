@@ -22,14 +22,14 @@ function updateCheckoutPage() {
   cartItems.forEach((product, index) => {
       const listItem = document.createElement('li');
       listItem.innerHTML = `
-          ${product.model} - ${product.price}€ 
+          ${product.model} - ${product.price}€  
           <input type="checkbox" class="product-checkbox" data-index="${index}">
           <button class="remove-product-button" data-index="${index}"><i class="fa-solid fa-trash-can"></i></button>
       `;
       checkoutProductsList.appendChild(listItem);
   });
 
-  checkoutTotal.textContent = cartTotal+ '€';
+  checkoutTotal.textContent = cartTotal+ '€ ';
 
   // Manejar clic en el botón para eliminar productos seleccionados
   removeSelectedButton.addEventListener('click', function () {

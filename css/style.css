@@ -345,6 +345,15 @@ main{
     padding: 0;
     display: none;
 }
+#btn-test{
+  width: 23vh;
+  margin-top: -55vh;
+  margin-left: 26vh;
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+}
 .centro p{
   font-size: 30px;
   font-weight: bold;
@@ -361,14 +370,18 @@ main{
   background: transparent;
   width: 2vh;
 }
-form {
+.row {
   max-width: 500px;
   margin: 20vh auto;
   background: white;
   padding: 5vh;
   border-radius: 3vh;
-}
+  position: relative;
 
+}
+#display{
+  color: white !important;
+}
 label {
   display: block;
   margin-top: 10px;
@@ -391,156 +404,207 @@ input {
 /* fin_checkout */
 
 /*footer  */
+
 footer {
-  background-color: #000000;
-  width: 100%;
-  margin-top: 222px;
-
-  display: grid;
-  grid-template-columns: 5fr 1fr 5fr;
-
+  margin-top: 20%;
+  bottom:0px;
+  width:100%;
+  height: auto;
+  background:#151111;
+  color:#ffffff;
 }
 
-.about-footer {
-  margin: 2rem;
-  display: grid;
-  justify-content: start;
-  
+form.form-contact {
+  margin: 0;
 }
 
 
-
-.about-footer li {
-  display: grid;
-  justify-content: flex-start;
+.footer-content{
+display: flex;
 }
 
 
-.rrss-footer {
-  display: flex;
+.footer-content .boxfooter{
+  flex-basis:50%;
+  padding:20px 50px;
+  }
+
+
+.boxfooter h2{
+  font-size:1.15rem;
+  text-transform: uppercase;
+}
+
+.boxfooter .content{
+  margin:20px 0 0 0;
+  position:relative;
+
+}
+
+.boxfooter .content:before{
+  position:absolute;
+  content:'';
+  top:-10px;
+  height:2px;
+  width:100%;
+  background:#ffffff;
+}
+
+.boxfooter .content:after{
+  position:absolute;
+  content:'';
+  height: 2px;
+  width:15%;
+  background:#28cdd0;
+  top:-10px;
+
+
+}
+
+.left .content .rrss-footer{
+  margin:20px 0 0 0;
+}
+.left .content .rrss-footer a{
+ padding: 0 2px;
+}
+
+.left .content .rrss-footer a span{
+  height:40px;
+  width:40px;
+  background:#428182;
+  line-height: 40px;
+  text-align: center;
+  font-size:18px;
   align-items: center;
+
+ }
+ 
+ .btn-contact button  {
+  background-color: #3fa8c3;
+  height: 40px;
+  width: 100%;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  border:none;
+  margin-top:1rem;
+  transition:.3s;
+  color:white;
 }
+
+button:hover {
+  transform: scale(1.2);
+  transition: all .3s; 
+
+}
+
 
 .logo-rrss {
-  width: 60%;
-  margin: 1rem;
+  width: 10%;
+  margin: 0.5 rem;
+  height: 10%;
   gap: 0;
-  transition: all .3s;
+  transition: all .3s; 
 }
-
 
 .logo-rrss:hover {
   transform: scale(1.3);
 }
 
-.info-footer {
-  margin: 1rem;
-  display: grid;
-  justify-content: flex-end;
-
+img.icono-ubicacion{
+  margin-top: 15px;
+  width: 4%;
+  height: 4%;
 }
 
-.info-footer p,
-li {
-  display: grid;
-  justify-content: flex-end;
+.center .content .text{
+  font-weight: 500;
+  padding-left:10px;
+  font-size: 1rem;
+  color: white;
+  
 }
 
-.font-style{
-color: #345e7f;
+
+.text-contact{
+  margin-bottom: 0.5rem;
+}
+
+.right form .msg{
+  margin-top: 10px;
+  padding: 5px;
+}
+
+
+.right form .email{
+  margin-top: 10px;
+  padding:5px;
+}
+
+
+.right form input, .right form textarea{
+  width:100%;
+  font-size:1.0625 rem;
+  background:rgb(255, 255, 255);
+  padding-left:10px;
+  border:1px #fff;
+  resize: none;
+  
+}
+
+
+.right form .text{
+margin-bottom:2px;
+color: black;
+}
+
+
+.right form input:focus, .right form textarea:focus{
+ outline-color:#28cdd0
+}
+
+.right form input{
+  height:35px;
+ }
+ 
+
+.list-style a {
+  text-decoration: none !important;
+  list-style: none;
+
+  color:#ffffff
+}
+
+.list-style a:hover {
+  color: #28cdd0;
+}
+
+ul, ol{
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-size:1.20rem;
+  
 }
 /* footer 
 
 /* Add this media query for responsiveness */
 @media screen and (max-width: 768px) {
-header .nav-item{
-  display: none;
-}
-  .navbar-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgb(216, 208, 208);
-    box-shadow: -2px 0 4px hsl(0 4% 15%/ 10%);
-  }
-
-  .navbar-nav.show {
-    display: flex;
-  }
-
-  .navbar-nav li {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .navbar-toggler {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .navbar-toggler .icon-bar {
-    background-color: #555;
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: background-color 0.3s;
-  }
-
-/* Estilos para el menú hamburguesa en pantallas más pequeñas */
-@media screen and (max-width: 1040px) {
-  .navbar-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-  }
-  .navbar-nav.show {
-    display: flex;
-  }
-  .navbar-toggler {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-  }
-}
-
-/* Estilos para pantallas aún más pequeñas (380px) */
-
-@media screen and (max-width: 768px) {
   .navbar {
-    font-size: medium;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
+    font-size: medium!important;
+    z-index: 1000!important;
+    display: flex!important;
+    flex-direction: column!important;
 }
-  }
 
   .navbar-nav {
-    flex-direction: column;
+    flex-direction: column!important;
   }
 
   .navbar-nav li {
-    text-align: center;
-    margin: 5px 0;
+    text-align: center!important;
+    margin: 5px 0!important;
   }
 
   .carousel-container {
@@ -571,12 +635,36 @@ header .nav-item{
     padding: 20px;
   }
 }
-@media screen and (min-width: 769px) {
-  .navbar {
-    /* Estilos específicos para pantallas medianas y grandes */
-    width: 210vh; /* O el valor que desees para pantallas grandes */
-    
-  }
+@media screen and (max-width: 1040px) {
+/* checkout */
+.check{
+  display: flex;
+  flex-direction: column;
+}
+/*  checkout*/
+/* producto */
+.central_p{
+  display: flex;
+  flex-direction: column;
+}
+/* producto */
+/* home */
+.navbar {
+  font-size: medium!important;
+  z-index: 1000!important;
+  display: flex!important;
+  flex-direction: column!important;
+}
+
+.navbar-nav {
+  flex-direction: column!important;
+}
+
+.navbar-nav li {
+  text-align: center!important;
+  margin: 5px 0!important;
+}
+/* home */
 }
 
 

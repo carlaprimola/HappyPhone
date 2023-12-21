@@ -16,7 +16,7 @@
     </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg  py-2 fixed-top" style="background-color: black;">
+    <nav class="navbar navbar-expand  py-2 fixed-top" style="background-color: black;">
       <div class="container-fluid">
         <a href="/index.html"><img src="/img/logo.png" alt="" class="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,17 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <div class="menu-btn"></div>
-              <a class="nav-link active" aria-current="page" href="#">Productos</a>
+              <a class="nav-link" href="/index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#catalog">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Sobre nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Registro</a>
+              <a class="nav-link" href="./template/form.html">Login</a>
             </li>
             <li class="nav-item">
               <div id="searchContainer">
@@ -80,7 +76,7 @@
     
     <button id="removeSelectedButton">Eliminar productos seleccionados</button>
     </div>
-  
+<div class="formulario">
     <form class="row g-3">
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Nombre</label>
@@ -98,32 +94,88 @@
         <label for="inputAddress2" class="form-label">Ciudad</label>
         <input type="text" class="form-control" id="inputAddress2" placeholder="Madrid">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" id="display">
         <label for="inputZip" class="form-label">Codigo Postal</label>
-        <input type="text" class="form-control" id="inputZip">
+        <input type="text" class="form-control" id="inputZip" style="border: none;">
       </div>
 
     </form>
-    
+     
     <div class="col-12">
       <button id="btn-test" class="btn btn-primary">Checkout</button>
     </div>
-
-<footer>
-  <div class="card text-center">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-footer text-muted">
-      2 days ago
-    </div>
-  </div>
-</footer>
+  </div> 
+</div>
+  </main>
+  <footer>
+    <section class="footer-content">
+      <div class="left boxfooter">
+  
+   
+           <h2> Sobre Nosotros </h2>
+           <div class="content">
+             <p>Somos HappyPhone, tu destino confiable para descubrir las últimas y mejores opciones en dispositivos móviles. Nos enorgullece ofrecer una amplia selección de teléfonos inteligentes de alta calidad, que van desde los últimos modelos hasta opciones asequibles y duraderas.</p>
+             <p>En HappyPhone, nos esforzamos por brindar la mejor experiencia de compra de teléfonos móviles, respaldada por un servicio al cliente excepcional. Ya sea que estés buscando la última tecnología o una solución confiable, estamos aquí para ayudarte a encontrar el dispositivo perfecto para satisfacer tus necesidades.</p>
+   
+           <figure class="rrss-footer">
+           <a href="#" target="_blank"><img class="logo-rrss" src="../img/instagram.png" alt="logo_instagram"></a>
+           <a href="#" target="_blank"><img class="logo-rrss" src="../img/facebook.png" alt="logo_facebook"></a>
+           <a href="#" target="_blank"><img class="logo-rrss" src="../img/whatsapp.png" alt="logo_whatsapp"></a>
+  
+         </figure>
+       </div>
+     </div>
+  
+       
+       <div class="center boxfooter">
+         <h2>HappyPhone</h2>
+         <div class="content">
+           <ul class="list-style"> 
+             <li><a href="#" target="_blank">Ayuda</a></li>
+             <li><a href="./terms.html">Términos y condiciones</a></li>
+             <li><a href="#" target="_blank">Trabaja con nosotros</a></li> 
+          </ul>
+          <div class="place">
+          <img src="../img/ubicacionIcono.png" alt="icono de ubicación" class= "icono-ubicacion">
+          <span class="text"> Calle Ficticia 28, Madrid, España</span>
+         </div>
+  
+          
+         </div>
+  
+  
+       </div>
+  
+  
+       <div class="right boxfooter">
+         <h2>Contacto</h2>
+  
+         <div class="content">
+           <form class="form-contact">
+             <div class="email">
+               <div class="text-contact"> Correo electrónico</div>
+               <label for="email"> </label>
+               <input type="email" id="email" name="email"  required >
+             </div>
+  
+           <div class="msg">
+             <div class="text-contact"> Motivo de contacto </div>
+               <label for="message"> </label>
+               <textarea id="message" name="message" rows="2"  cols="25"  required></textarea>
+           </div>
+  
+           <div class="btn-contact">
+               <button type="submit">Enviar</button>
+           </div>
+         </form>
+  
+         </div>
+         
+       </div>
+       
+   </section>
+  
+  </footer>
         <script src="../src/checkout.js"></script>
         <script src="../client/script.js"></script>
        

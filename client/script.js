@@ -1,4 +1,5 @@
-const button = document.querySelector("button")
+const button = document.getElementById("btn-test")
+console.log("Comentario" + button)
 button.addEventListener("click", () => {
   fetch("http://localhost:3000/create-checkout-session", {
     method: "POST",

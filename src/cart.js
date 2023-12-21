@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const paginationContainer = document.getElementById('pagination');
   const searchInput = document.getElementById('searchInput');
   const searchButton = document.getElementById('searchButton');
-  const cartIcon = document.getElementById('cartIcon');
+  const cartIcon = document.getElementById('openCartButton');
   const cartListContainer = document.getElementById('cartList');
   const checkoutButton = document.getElementById('checkoutButton');
   const openCartButton = document.getElementById('openCartButton');
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const productsPerPage = 6;
   let currentPageIndex = 0;
 
+  
   
 
   
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cart.splice(index, 1);
     updateCartIcon();
     showCartList();
+    updateCartBox();
   }
 
   function navigatePage(pages, newIndex) {
@@ -129,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
     checkoutProductsList.innerHTML = '';
 
     let total = 0;
-
+// LISTA PARA CHECKOUT
     cart.forEach(product => {
       const listItem = document.createElement('li');
       listItem.innerHTML = `
@@ -142,36 +144,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     checkoutTotal.textContent = total;
   }
-
+// 
   function createProductElement(product) {
     const productElement = document.createElement('div');
     productElement.classList.add('product');
-
+  
     productElement.innerHTML = `
       <img src="${product.image}" alt="${product.model}">
       <h2>${product.model}</h2>
       <p>${product.price} €</p>
       <div>
-        <input type="number" class="quantityInput" value="1" min="1">
         <button class="btn btn-primary addToCartBtn" data-product="${JSON.stringify(product)}">Add to Cart</button>
-         <button class="viewDetailsBtn"><i class="fa-solid fa-eye"></i></button>
+        <button class="viewDetailsBtn"><i class="fa-solid fa-eye"></i></button>
       </div>
-     
     `;
-
+  
     const addToCartBtn = productElement.querySelector('.addToCartBtn');
     addToCartBtn.addEventListener('click', () => {
-      const quantityInput = productElement.querySelector('.quantityInput');
-      const quantity = parseInt(quantityInput.value, 10);
-      addToCart(product, quantity);
+      addToCart(product, 1); // Si no hay un campo de cantidad, siempre agregar 1 artículo
     });
-
+  
     const viewDetailsBtn = productElement.querySelector('.viewDetailsBtn');
     viewDetailsBtn.addEventListener('click', () => openProductDetailsPage(product));
-
+  
     return productElement;
   }
-
+  
+// DETALLE DEL PRODCTO
   function openProductDetailsPage(product) {
     // Construye la URL de la página de detalles del producto
     const productDetailsURL = `/template/product.html?product=${encodeURIComponent(JSON.stringify(product))}`;
@@ -179,7 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Redirige a la nueva URL
     window.location.href = productDetailsURL;
   }
-
+// 
+// BUSCAR PRODUCTO
   function performSearch() {
     const searchTerm = searchInput.value.toLowerCase();
     const filteredProducts = allProducts.filter(product => product.model.toLowerCase().includes(searchTerm));
@@ -187,7 +187,8 @@ document.addEventListener('DOMContentLoaded', function () {
     currentPageIndex = 0;
     displayPage(pages, currentPageIndex);
   }
-
+// 
+// PAGINACION
   function updatePaginationButtons() {
     const buttons = paginationContainer.querySelectorAll('button');
 
@@ -199,28 +200,31 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+//
+function updateCartBox() {
+  const cartBox = document.querySelector('.cart-box');
+  cartBox.innerHTML = '';
 
-  function updateCartBox() {
-    const cartBox = document.querySelector('.cart-box');
-    cartBox.innerHTML = '';
+  let total = 0;
 
-    let total = 0;
+  cart.forEach((product, index) => {
+    const cartProduct = document.createElement('div');
+    cartProduct.innerHTML = `
+      <p>${product.model} - ${product.price}<button class="removeFromCartBtn">
+      <i class="fa-solid fa-trash"></i></button>
+    </p>
+    `;
 
-    cart.forEach(product => {
-      const cartProduct = document.createElement('div');
-      cartProduct.innerHTML = `
-        <p>${product.model} - ${product.price}</p>
-        <button class="removeFromCartBtn">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      `;
-      // eliminar elementos del carrito
-      const removeButton = cartProduct.querySelector('.removeFromCartBtn');
-      removeButton.addEventListener('click', () => removeFromCart(cart.indexOf(product)));
+    // Agregar atributo data-index al botón para almacenar el índice del producto en el carrito
+    cartProduct.querySelector('.removeFromCartBtn').setAttribute('data-index', index);
 
-      cartBox.appendChild(cartProduct);
-      total += product.price;
-    });
+    // Eliminar elementos del carrito
+    const removeButton = cartProduct.querySelector('.removeFromCartBtn');
+    removeButton.addEventListener('click', () => removeFromCart(index));
+
+    cartBox.appendChild(cartProduct);
+    total += product.price;
+  });
     //
     const totalElement = document.createElement('div');
     totalElement.innerHTML = `<h3>Total: ${total}</h3>`;
@@ -233,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cartListContainer.style.display = 'none';
     }
   }
-
+// 
   openCartButton.addEventListener('click', function () {
     // Alternar la visibilidad del contenedor al hacer clic en el botón
     if (cartContainer.style.display === 'block') {
@@ -251,20 +255,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let total = 0;
 
-    cart.forEach((product, index) => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `
-            ${product.model} - ${product.price}
-            <button class="removeFromCartBtn" data-index="${index}">Remove</button>
-        `;
-
-        total += product.price;
-
-        const removeButton = listItem.querySelector('.removeFromCartBtn');
-        removeButton.addEventListener('click', () => removeFromCart(index));
-
-        cartListItemsContainer.appendChild(listItem);
-    });
 
     const totalElement = document.createElement('li');
     totalElement.innerHTML = `<p>Total: ${total}</p>`;

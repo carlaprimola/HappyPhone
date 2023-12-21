@@ -181,29 +181,28 @@ form.addEventListener('submit',(e)=>{
 
 
 
-//Código necesario para que aparezca las imagenes en el captcha
+//Código necesario para que funcione el captcha tras hacer deploy
 
-
-const express = require ('express');
+const express = require('express');
 const cors = require('cors');
-const app= express();
-const port =3000;
+const fetch = require('node-fetch'); //Necesario tener el node fetch instalado
 
+const app = express();
+const port = 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://soyshan.github.io',
+  methods: 'POST',
+  credentials: true,
+}));
 
-app.use(express.urlencoded(
-    {
-        extend:false 
-    }
-))
-
+app.use(express.urlencoded({ extended: false }));
 
 app.post('/upload', function(req, res){
 
 
     const params = new URLSearchParams({
-        secret:'6LcB9TQpAAAAAN9czsF1XP84nPO_WvcLkz-pYb0R',
+        secret:'6LekUzgpAAAAAGpPKUJGokol1hp_NZRFnAIu8N7R',
     
         response:req.body['g-recaptcha-response'],
         remoteip: req.ip,
@@ -231,4 +230,3 @@ app.post('/upload', function(req, res){
 app.listen(port,()=>{
     console.log(`App running on port ${port}`);
 })
-

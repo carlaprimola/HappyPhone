@@ -318,6 +318,253 @@ main{
 }
 
 /* fin_ficha */
+/* form */
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  height: 640px;
+  background-color: #F5F5F5;
+  border-radius: 0.5rem;
+  box-shadow: 50px 60px 50px -30px rgb(145, 145, 145);
+  margin-left: 20%;
+  margin-top:20vh;
+}
+
+.inner-box {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forms-wrap {
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
+}
+
+form {
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: opacity 0.02s 0.4s;
+}
+
+form.sign-up-form {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 27px;
+  margin-right: 0.3rem;
+}
+
+.logo h4 {
+  font-size: 1.1rem;
+  margin-top: -9px;
+  letter-spacing: -0.5px;
+  color: #151111;
+}
+
+.heading h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #151111;
+}
+
+.heading h6 {
+  color: #bababa;
+  font-weight: 400;
+  font-size: 0.75rem;
+  display: inline;
+}
+
+.toggle {
+  color: #151111;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.toggle:hover {
+  color: #8371fd;
+}
+
+.input-wrap {
+  position: relative;
+  height: 37px;
+  margin-bottom: 2rem;
+}
+
+#email-error, #user-error, #user-error2, #password-error, #password-error2{
+    position: absolute;
+    margin-top: 0.2rem;
+    color:red;
+    transition:top 0.5s;
+    font-size:0.8rem;
+    
+}
+
+
+
+
+.input-field {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+  transition: 0.4s;
+}
+
+label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #bbb;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-field.active {
+  border-bottom-color: #151111;
+}
+
+.input-field.active + label {
+  font-size: 0.75rem;
+  top: -2px;
+}
+
+
+.sign-btn {
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  background-color: #151111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+
+
+
+.sign-btn:hover {
+  background-color: #5dc3eb;
+}
+
+.text {
+  color: #bbb;
+  font-size: 0.7rem;
+}
+
+.text a {
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.text a:hover {
+  color: #8371fd;
+}
+
+main.sign-up-mode form.sign-in-form {
+  opacity: 0;
+  pointer-events: none;
+}
+
+main.sign-up-mode form.sign-up-form {
+  opacity: 1;
+  pointer-events: all;
+}
+
+main.sign-up-mode .forms-wrap {
+  left: 55%;
+}
+
+main.sign-up-mode .sideImage {
+  left: 0%;
+}
+
+.sideImage {
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  left: 45%;
+  top: 0;
+  background-image: url(../img/imgFormulario.gif);
+  background-size: cover;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  transition: 0.8s ease-in-out;
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
+  /* grid-column: 1/2;
+  grid-row: 1/2; */
+  /* opacity: 0; */
+  transition: opacity 0.3s, transform 0.5s;
+}
+
+
+
+.text-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(700%);
+  transition: 0.5s;
+  line-height: 2.2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+
+
+
+
+ 
+/* form */
 /* checkout */
   .centro{
     margin-top: 20vh;
@@ -588,9 +835,48 @@ ul, ol{
   
 }
 /* footer 
+/* hamburguesa */
+.menu_hamburguesa {
+  border-style: none;
+  background: transparent;
+  display: none;
+}
 
+
+.menu_desplegable {
+  display: none; /* para que se oculte al principio*/
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #fff; /* Color de fondo del menú */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  flex-direction: column;
+
+}
+
+/* Estilos para los elementos del menú desplegable */
+.menu_desplegable a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000000; 
+}
+
+/* Estilos para los elementos del menú desplegable al pasar el ratón sobre ellos */
+.menu_desplegable a:hover {
+  background-color: #BFEE9A; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Muestra el menú desplegable cuando el menú hamburguesa está activo */
+.menu_hamburguesa.active + .menu_desplegable {
+  display: block;
+}
+/* hamburguesa */
 /* Add this media query for responsiveness */
 @media screen and (max-width: 768px) {
+  
   .navbar {
     font-size: medium!important;
     z-index: 1000!important;
@@ -649,11 +935,12 @@ ul, ol{
 }
 /* producto */
 /* home */
-.navbar {
+.navbar a {
   font-size: medium!important;
   z-index: 1000!important;
   display: flex!important;
   flex-direction: column!important;
+  width: 100%;
 }
 
 .navbar-nav {
@@ -664,10 +951,155 @@ ul, ol{
   text-align: center!important;
   margin: 5px 0!important;
 }
-/* home */
+
+.logo{
+
+}
+@media screen and (max-width:900px){
+  footer{
+    position:relative;
+  }
+  .footer-content{
+    flex-wrap:wrap;
+    flex-direction: column;
+  }
+}
+}
+
+@media (max-width: 850px) {
+  .box {
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+    margin-left: 0%;
+    margin-top:20vh;
+  }
+
+  .inner-box {
+    position: static;
+    transform: none;
+    width: revert;
+    height: revert;
+    padding: 2rem;
+  }
+
+  .forms-wrap {
+    position: revert;
+    width: 100%;
+    height: auto;
+  }
+
+  form {
+    max-width: revert;
+    padding: 1.5rem 2.5rem 2rem;
+    transition: transform 0.8s ease-in-out, opacity 0.45s linear;
+    margin-top: 20vh;
+  }
+
+  .heading {
+    margin: 2rem 0;
+  }
+
+
+  form.sign-up-form {
+    transform: translateX(100%);
+  }
+
+  main.sign-up-mode form.sign-in-form {
+    transform: translateX(-100%);
+  }
+
+  main.sign-up-mode form.sign-up-form {
+    transform: translateX(0%);
+  }
+
+  .sideImage {
+    position: revert;
+    height: auto;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+  }
+
+  .images-wrapper {
+    display: none;
+  }
+
+  .text-slider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 530px) {
+  main {
+    padding: 1rem;
+  }
+
+  .box {
+    border-radius: 2rem;
+  }
+
+  .inner-box {
+    padding: 1rem;
+  }
+
+  .sideImage {
+    padding: 1.5rem 1rem;
+    border-radius: 1.6rem;
+  }
+
+  .text-wrap {
+    margin-bottom: 1rem;
+  }
+
+  .text-group h2 {
+    font-size: 1.2rem;
+  }
+
+  form {
+    padding: 1rem 2rem 1.5rem;
+  }
 }
 
 
+
+
+@media screen and (max-width: 768px) {
+    .formulario {
+        width: 80%;
+    }
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+
+    h4 {
+        font-size: 28px;
+        /* Ajusta el ancho al 100% en pantallas más pequeñas */
+    }
+}
+
+
+.main-form{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.logo-register{
+    width: 30px;
+    
+   
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 1000px) {
+    .control {
+        width: 86%;
+        /* Ajusta el ancho al 100% en pantallas más pequeñas */
+    }
+}
 
 
 
